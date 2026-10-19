@@ -1,6 +1,6 @@
-"""Jarri phone service: Zorin Connect over its session D-Bus service, for Jarri Workspace.
+"""Phone: Zorin Connect over its session D-Bus service, over localhost HTTP.
 
-Backend only. Jarri's phone panel is a client of this service.
+Runs on its own with `python3 server.py`. Any client can use it, a panel in Jarri is optional.
 Zorin Connect keeps doing the KDE Connect protocol, pairing and clipboard sync.
 This service only calls the Zorin service that is already running.
 
@@ -197,7 +197,7 @@ class Handler(BaseHTTPRequestHandler):
 
 def main():
     server = ThreadingHTTPServer((HOST, PORT), Handler)
-    print(f"jarri phone service on http://{HOST}:{PORT}", file=sys.stderr)
+    print(f"phone service on http://{HOST}:{PORT}", file=sys.stderr)
     server.serve_forever()
 
 
