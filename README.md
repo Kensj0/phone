@@ -2,7 +2,7 @@
 
 Telefonstatus och fasta kommandon via Zorin Connect.
 
-Fristående backend. Jarri kan använda den men den körs utan Jarri. Backend i `server.py`, bara standardbiblioteket, binder till `127.0.0.1`.
+Fristående backend. Jarri kan använda den men den körs utan Jarri. Backend i `server.py`, binder till `127.0.0.1`. Kräver PyGObject (`gi`) för att prata med Zorin Connect, övrigt är standardbiblioteket.
 
 - Port: 8782
 - Kör: `python3 server.py`
